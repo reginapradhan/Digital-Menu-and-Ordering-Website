@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background:#61C0BF;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  background-color: #e9e7da; 
+
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  height: 100%;
+  position:sticky;
+  top: 0;
+}
+.side button.active{
+	background-color:#B7DDE0 !important;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 80%; /* IE10 */
+  flex: 80%;
+  background-color: white;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #B7DDE0;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+* {box-sizing: border-box}
+
+/* Style the buttons that are used to open the tab content */
+.side button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  font-size: 18px;
+  padding: 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.side button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.side button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  font-family: arial;
+  border-radius: 10px;
+  float: left;
+  background-color: #e9e7da;
+
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height:200px;
+  object-fit: cover;
+}
+
+.shop-item-price {
+  color: grey;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #61C0BF;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 0 0 10px 10px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.dbutton {
+  background-color: #e9e7da;
+  border: 2px solid gray;
+  color: black;
+  padding: 15px 0 15px 0;
+  text-decoration: none;
+  display: inline-block;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 70%;
+  text-align: left;
+}
+
+.dbprice{
+  padding-right: 15px;
+  float: right;
+}
+
+.dbtext{
+  padding-left: 15px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.snackhead{
+  text-align: center;
+  width: 70%;
+  font-size: 24px;
+  font-weight: bold;
+  color:#61C0BF;
+}
+
+.cart-row{
+  border: 2px solid #61C0BF;
+  border-radius: 5px;
+  background-color: #e9e7da;
+  margin-right: 5px;
+}
